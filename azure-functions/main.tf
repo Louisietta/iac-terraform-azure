@@ -3,12 +3,21 @@ terraform {
     path = "/.terraform.tfstate"
 }
 }
-resource "local file" "hello"{
-  content = var.hellotext
-  filename = var.name
+resource "resource group"{
+  group = var.azurerm_resource_group
 }
-azurerm_resource_group 
-azurerm_storage_account
-azurerm_service_plan
-azurerm_linux_function_app
-azurerm_function_app_function
+resource "resource group"{
+  account = var.azurerm_storage_account
+}
+resource "storage account"{
+  account = var.azurerm_storage_account
+}
+resource "service plan"{
+  service = var.azurerm_service_plan
+}
+resource "linux app"{
+  linuxapp = var.azurerm_linux_function_app
+}
+resource "function app"{
+  functionapp = var.azurerm_function_app_function
+}
