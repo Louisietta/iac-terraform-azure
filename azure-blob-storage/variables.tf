@@ -1,6 +1,12 @@
 variable "azurerm_resource_group"{
-  type = string
-  default  = value1
+  type = object({
+            name = string
+            location = string
+            })
+  default  = {
+            name = value1
+            location = value11
+            }
 
 variable "azurerm_storage_account"{
   type = object({
@@ -19,5 +25,5 @@ variable "azurerm_storage_container"{
 
 variable " azurerm_storage_blob"{
   type = string
-  default = value7
+  default = url
 }
