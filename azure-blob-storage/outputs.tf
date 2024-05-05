@@ -1,3 +1,3 @@
 output "storage_blob" {
-  value = azurerm_storage_blob.url
+  value = "https://myaccount.blob.core.windows.net/mycontainer/myblob"
 }
